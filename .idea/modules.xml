@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Scouting App.iml" filepath="$PROJECT_DIR$/.idea/Scouting App.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../ScoutingProject/.idea/untitled.iml" filepath="$PROJECT_DIR$/../ScoutingProject/.idea/untitled.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ScoutingServer/.idea/ScoutingServer.iml" filepath="$PROJECT_DIR$/../ScoutingServer/.idea/ScoutingServer.iml" />
     </modules>
   </component>
 </project>
