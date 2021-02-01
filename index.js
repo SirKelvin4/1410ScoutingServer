@@ -14,7 +14,7 @@ let data = bigData;
 let fillSpace;
 let ask = 0;
 let emptyCell = false;
-const url = 'https://740fb1e16dca.ngrok.io';
+const url = 'https://9491d7f600f4.ngrok.io';
 
 let values = [
     []
@@ -58,7 +58,6 @@ app.post('/', (request, response) => {
     body = {
         values: values
     };
-
     const SCOPES = ['https://www.googleapis.com/auth/spreadsheets']; //If changing, delete token.json
     const TOKEN_PATH = 'token.json';
 
@@ -132,7 +131,7 @@ app.post('/', (request, response) => {
         const sheetsRead = google.sheets({version: 'v4', auth});
         sheetsRead.spreadsheets.values.update({
             spreadsheetId: '1HfYjHhirqyapYwD0imXfGjIwiJ3whPs1M35t--MXrQA',
-            range: `Data!A${ask+1}:AB`,
+            range: `Data!A${ask}:AB`,
             valueInputOption: 'RAW',
             requestBody: body
         });
