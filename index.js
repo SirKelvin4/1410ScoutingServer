@@ -95,7 +95,7 @@ app.post('/', (request, response) => {
             if (rows.length) {
                 // Print columns A and E, which correspond to indices 0 and 4.
                 rows.map((row) => { //Repeats twice for some reason
-                    // console.log(`${row[1]}, ${row[2]}`);
+                    //console.log(`${row[1]}, ${row[2]}`);
                     //Starts at A2 = 0 in the array
                     while (emptyCell === false) {
                         fillSpace = row[ask];
@@ -131,7 +131,7 @@ app.post('/', (request, response) => {
         const sheetsRead = google.sheets({version: 'v4', auth});
         sheetsRead.spreadsheets.values.update({
             spreadsheetId: '1HfYjHhirqyapYwD0imXfGjIwiJ3whPs1M35t--MXrQA',
-            range: `Data!A${ask}:AB`,
+            range: `Data!A${ask+1}:AB`,
             valueInputOption: 'RAW',
             requestBody: body
         });
