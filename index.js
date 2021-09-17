@@ -14,7 +14,7 @@ let data = bigData;
 let fillSpace;
 let ask = 0;
 let emptyCell = false;
-const url = 'https://965d-2601-282-380-6a20-b578-fbac-d5ad-a49c.ngrok.io.ngrok.io';
+const url = 'https://7c89-2601-282-380-6a20-b578-fbac-d5ad-a49c.ngrok.io';
 
 let values = [
     []
