@@ -8,13 +8,13 @@ const server = require('http').Server(app);
 let cors = require('cors');
 let bodyParser = require('body-parser');
 let test = {test: 'POST'};
-const bigData = {"Scout_Number":"Default","Team_Number":"1410","Alliance_Station":"R1","Auto_Low_Goal_Scored":"0","Auto_Low_Goal_Missed":"0","Auto_Mid_Goal_Scored":"0","Auto_Mid_Goal_Missed":"0","Auto_High_Goal_Scored":"0","Auto_High_Goal_Missed":"0","Auto_Power_Shot_Target":"0","Auto_Wobble_Correct_Zone":"false","Teleop_Low_Goal_Scored":"0","Teleop_Low_Goal_Missed":"0","Teleop_Mid_Goal_Scored":"0","Teleop_Mid_Goal_Missed":"0","Teleop_High_Goal_Scored":"0","Teleop_High_Goal_Missed":"0","Endgame_Low_Goal_Scored":"2","Endgame_Low_Goal_Missed":"0","Endgame_Mid_Goal_Scored":"0","Endgame_Mid_Goal_Missed":"1","Endgame_High_Goal_Scored":"0","Endgame_High_Goal_Missed":"0","Endgame_Power_Shot_Target":"0","Endgame_Wobble_Start_Line":"false","Endgame_Wobble_Drop_Zone":"false","Endgame_Wobble_Rings":"1"};
+const bigData = {"Scout_Number":"abcdefg","Team_Number":"1619","Alliance_Station":"R1","Auto_Line":"false","Auto_Level1_Scored":"0","Auto_Level2_Scored":"0","Auto_Shots_Missed":"0","Teleop_Level1_Scored":"0","Teleop_Level2_Scored":"0","Teleop_Shots_Missed":"0","Rotation_Control":"false","Position_Control":"false","Dead_On_Field":"false","Endgame_Position":"Default","Balanced":"false"};
 const PORT = 80;
 let data = bigData;
 let fillSpace;
 let ask = 0;
 let emptyCell = false;
-const url = 'https://7c89-2601-282-380-6a20-b578-fbac-d5ad-a49c.ngrok.io';
+const url = 'https://e9f8-2601-282-380-6a20-65d0-5197-86c7-6d88.ngrok.io';
 
 let values = [
     []
@@ -48,9 +48,8 @@ app.post('/', (request, response) => {
 
     values = [
         [
-            data.Scout_Number, data.Team_Number, data.Alliance_Station, data.Auto_High_Goal_Scored, data.Auto_High_Goal_Missed, data.Auto_Mid_Goal_Scored, data.Auto_Mid_Goal_Missed, data.Auto_Low_Goal_Scored, data.Auto_Low_Goal_Missed, data.Auto_Power_Shot_Target, data.Auto_Wobble_Correct_Zone,
-            data.Teleop_High_Goal_Scored, data.Teleop_High_Goal_Missed, data.Teleop_Mid_Goal_Scored, data.Teleop_Mid_Goal_Missed, data.Teleop_Low_Goal_Scored, data.Teleop_Low_Goal_Missed,
-            data.Endgame_High_Goal_Scored, data.Endgame_High_Goal_Missed, data.Endgame_Mid_Goal_Scored, data.Endgame_Mid_Goal_Missed, data.Endgame_Low_Goal_Scored, data.Endgame_Low_Goal_Missed, data.Endgame_Power_Shot_Target, data.Endgame_Wobble_Rings, data.Endgame_Wobble_Start_Line, data.Endgame_Wobble_Drop_Zone
+            data.Scout_Number, data.Team_Number, data.Alliance_Station, data.Auto_Line, data.Auto_Level1_Scored, data.Auto_Level2_Scored, data.Auto_Shots_Missed, data.Teleop_Level1_Scored, data.Teleop_Level2_Scored,
+            data.Teleop_Shots_Missed, data.Rotation_Control, data.Position_Control, data.Dead_On_Field, data.Endgame_Position, data.Balanced,
         ]
         // Additional rows ...
     ];
