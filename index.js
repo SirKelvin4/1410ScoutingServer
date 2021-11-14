@@ -9,12 +9,12 @@ let cors = require('cors');
 let bodyParser = require('body-parser');
 let test = {test: 'POST'};
 const bigData = {"Scout_Number":"abcdefg","Team_Number":"1619","Alliance_Station":"R1","Auto_Line":"false","Auto_Level1_Scored":"0","Auto_Level2_Scored":"0","Auto_Shots_Missed":"0","Teleop_Level1_Scored":"0","Teleop_Level2_Scored":"0","Teleop_Shots_Missed":"0","Rotation_Control":"false","Position_Control":"false","Dead_On_Field":"false","Endgame_Position":"Default","Balanced":"false"};
-const PORT = 80;
+const PORT = 4499;
 let data = bigData;
 let fillSpace;
 let ask = 0;
 let emptyCell = false;
-const url = 'https://e9f8-2601-282-380-6a20-65d0-5197-86c7-6d88.ngrok.io';
+const url = 'localhost:4499';
 
 let values = [
     []
@@ -38,6 +38,7 @@ server.listen(PORT, (err) => {
 app.get('/', (request, response) => {
     response.send();
     fakePOSTConnect().then(response => response.JSON).catch(console.error);
+    console.log("test")
 });
 
 app.post('/', (request, response) => {
